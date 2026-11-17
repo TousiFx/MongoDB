@@ -51,17 +51,17 @@ const User = mongoose.model("User", userSchema);
 //     console.log(err);
 //   });
 
-User.insertMany([
-  { name: "tanya", email: "tanya321@gmail.com", age: 26 },
-  { name: "zishan", email: "zishan21@gmail.com", age: 22 },
-  { name: "massu", email: "massu@gmail.com", age: 29 },
-])
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// User.insertMany([
+//   { name: "tanya", email: "tanya321@gmail.com", age: 26 },
+//   { name: "zishan", email: "zishan21@gmail.com", age: 22 },
+//   { name: "massu", email: "massu@gmail.com", age: 29 },
+// ])
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 
 // User.findOneAndDelete({ name: "zishan" }, { new: true }).then((res) => {
 //   console.log(res);
