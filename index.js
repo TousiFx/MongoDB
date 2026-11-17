@@ -18,14 +18,19 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
-User.findById("6afbfb8cf9a25786005d0f25")
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// User.findById("6afbf9ec4b426e3bf582305e")
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 
+// User.findOneAndUpdate({ name: "tanya" }, { age: 27 }, { new: true }).then(
+//   (res) => {
+//     console.log(res);
+//   },
+// );
 // const User1 = new User({
 //   name: "Tousif",
 //   email: "tousif99@gmail.com",
@@ -57,3 +62,11 @@ User.findById("6afbfb8cf9a25786005d0f25")
 //   .catch((err) => {
 //     console.log(err);
 //   });
+
+User.deleteOne({ name: "zaid" }, { new: true }).then((res) => {
+  console.log(res);
+});
+
+User.deleteMany({ age: { $gte: 27 } }).then((res) => {
+  console.log(res);
+});
