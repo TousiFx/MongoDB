@@ -17,9 +17,11 @@ const newbookSchema = new mongoose.Schema({
   },
   aurther: {
     type: String,
+    minLength: 20,
   },
   price: {
     type: Number,
+    min: 1,
   },
 });
 
